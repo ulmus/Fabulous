@@ -8,7 +8,7 @@ fabconf = {}
 fabconf['SERVER_USERNAME'] = "ubuntu"
 
 # Full local path for .ssh
-fabconf['SSH_PATH'] = "/path/to/.ssh"
+fabconf['SSH_PATH'] = "/home/jens/Dropbox/UtvecklingPrivat/EC2/.ssh"
 
 # List of APT packages to install
 fabconf['APT_PACKAGES'] = [
@@ -20,7 +20,7 @@ fabconf['APT_PACKAGES'] = [
 fabconf['PIP_PACKAGES'] = ["virtualenv", "virtualenvwrapper","supervisor"]
 
 # Name of the private key file you use to connect to EC2 instances
-fabconf['EC2_KEY_NAME'] = "key.pem"
+fabconf['EC2_KEY_NAME'] = "PRNBetaNginX.pem"
 
 # Don't edit. Full path of the ssh key you use to connect to EC2 instances
 fabconf['SSH_PRIVATE_KEY_PATH'] = '%s/%s' % (fabconf['SSH_PATH'], fabconf['EC2_KEY_NAME'])
@@ -59,7 +59,7 @@ fabconf['GITHUB_REPO'] = "https://github.com/gcollazo/Blank-django-Project.git"
 fabconf['ACTIVATE'] = "source /home/%s/.virtualenvs/%s/bin/activate" % (fabconf['SERVER_USERNAME'], fabconf['PROJECT_NAME'])
 
 # Name tag for your server instance on EC2
-fabconf['INSTANCE_NAME_TAG'] = "AppServer"
+fabconf['INSTANCE_NAME_TAG'] = "BetaServer"
 
 # EC2 key. http://24v.co/j5ImEZ 
 ec2_key = ''
@@ -74,7 +74,7 @@ ec2_amis = ['ami-ccf405a5']
 ec2_keypair = ''
 
 # Name of the security group. http://24v.co/kl0Jyn 
-ec2_secgroups = ['']
+ec2_secgroups = ['PRN-beta']
 
 # API Name of instance type. http://24v.co/mkWvpn
 ec2_instancetype = 't1.micro'
